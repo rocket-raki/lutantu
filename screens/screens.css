@@ -1,0 +1,187 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #ffffff;
+    --accent-color: #1da1f2;
+    --text-color: #0f1419;
+    --border-color: #e6ecf0;
+    --icon-color: #657786;
+    --font-family: 'ABeeZee', 'Roboto', sans-serif;
+    --transition: 0.3s;
+}
+
+/* ============================= */
+/* Main container */
+.main-body {
+    padding: 20px;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    min-height: calc(100vh - 60px);
+}
+
+/* Headings */
+.main-body h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.main-body h2 {
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Paragraphs */
+.main-body p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* ============================= */
+/* Sections */
+.main-body .explore-section,
+.main-body .notifications-list,
+.main-body .people-list {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.main-body .explore-section:hover,
+.main-body .notifications-list:hover,
+.main-body .people-list:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================= */
+/* Lists */
+.main-body ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.main-body ul li {
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background var(--transition);
+}
+
+.main-body ul li:last-child {
+    border-bottom: none;
+}
+
+.main-body ul li:hover {
+    background-color: rgba(29, 161, 242, 0.05);
+}
+
+/* ============================= */
+/* Notification items */
+.notification-item {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background var(--transition);
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: rgba(29, 161, 242, 0.05);
+}
+
+/* ============================= */
+/* People list */
+.person-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: background var(--transition);
+}
+
+.person-item:last-child {
+    border-bottom: none;
+}
+
+.person-item:hover {
+    background-color: rgba(29, 161, 242, 0.05);
+}
+
+.person-item button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.person-item button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* ============================= */
+/* Generic buttons */
+.main-body button {
+    cursor: pointer;
+    font-family: var(--font-family);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.main-body button:hover {
+    background-color: #0d95e8;
+    transform: translateY(-1px);
+}
+
+/* ============================= */
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .main-body {
+        padding: 15px;
+        padding-bottom: 100px;
+    }
+
+    .person-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .person-item button {
+        margin-top: 8px;
+    }
+
+    .main-body h1 {
+        font-size: 24px;
+    }
+
+    .main-body h2 {
+        font-size: 20px;
+    }
+}
